@@ -6,23 +6,97 @@
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="alternate" hreflang="en" href="index.html" />
+    <link rel="alternate" hreflang="no" href="index.html?lang=no" />
+    <style>
+	        .grid-background {
+            background-color: #000;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 60px 60px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .grid-background:hover {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+            background-size: 80px 80px;
+        }
+        
+        .grid-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 0px 0px, rgba(255, 255, 255, 0.3) 2px, transparent 2px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        
+        .grid-background:hover::before {
+            background-image: 
+                radial-gradient(circle at 0px 0px, rgba(255, 255, 255, 0.5) 4px, transparent 4px);
+            background-size: 80px 80px;
+        }
+        
+        .project-item {
+            transition: all 0.3s ease;
+            border-left: 2px solid transparent;
+        }
+        
+        .project-item:hover {
+            border-left-color: #ffffff;
+            transform: translateX(8px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+        .fade-in:nth-child(5) { animation-delay: 0.5s; }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .title-glow {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+    </style>
 </head>
 <body class="grid-background min-h-screen flex items-center justify-center p-8">
-    <div class="max-w-2xl w-full">
-        <!-- Header -->
+    <div class="max-w-2xl w-full">    
+    <!-- Header -->
         <div class="text-center mb-16 fade-in">
-            <h1 class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Portfolio</h1>
-            <p class="text-gray-400 text-lg font-light">Selected Works & Projects</p>
+            <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Portfolio</h1>
+            <p id="subtitle" class="text-gray-400 text-lg font-light">Selected Works & Projects</p>
         </div>
-        
+
         <!-- Projects List -->
         <div class="space-y-1">
-            <a href="exitnode.html">
+            <a href="/exitnode">
                 <div class="project-item p-6 rounded-lg fade-in">
                     <div class="flex justify-between items-center">
                         <div>
-                            <h3 class="text-xl font-medium text-white mb-2">Evacuation system</h3>
-                            <p class="text-gray-400 text-sm">Python flask web app with biometric and RFID scanning in emergency situations</p>
+                            <h3 id="title" class="text-xl font-medium text-white mb-2">Evacuation system</h3>
+                            <p id="desc" class="text-gray-400 text-sm">Python flask web app with biometric and RFID scanning in emergency situations</p>
                         </div>
                         <div class="text-gray-500 text-sm">2024</div>
                     </div>
@@ -53,7 +127,7 @@
                 </div>
             </a>
 
-            <a href="nøsted&.html">
+            <a href="noested.html">
                 <div class="project-item p-6 rounded-lg fade-in">
                     <div class="flex justify-between items-center">
                         <div>
@@ -80,5 +154,6 @@
     </div>
 
     <script src="footerscript.js"></script>
+    <script src="../language.js"></script>
 </body>
 </html>

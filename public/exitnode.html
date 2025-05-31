@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="grid-background min-h-screen flex items-center justify-center p-8">
+    <div class="max-w-2xl w-full">
+        <!-- Back Button -->
+        <div class="mb-8 fade-in">
+            <a href="index.html"
+                class="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-300 group">
+                <svg class="w-5 h-5 mr-2 transition-transform duration-300 group-hover:-translate-x-1" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span
+                    class="text-lg font-light border-b border-transparent group-hover:border-white transition-all duration-300">Back
+                    to Portfolio</span>
+            </a>
+        </div>
+
+        <!-- Header -->
+        <div class="text-center mb-16 fade-in">
+            <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Evacuation system for
+                emergency services</h1>
+            <p id="desc" class="text-gray-400 text-lg font-light">Bachelor project in collaboration with CIEM for
+                evacuating people in a crisis</p>
+            <p id="features" class="text-gray-400 text-lg font-light">Features</p>
+            <ul id="feature-list" class="list-disc list-inside text-gray-400 text-lg font-light">
+                <li>Biometric authentication</li>
+                <li>RFID badge scanning</li>
+                <li>Emergency reporting dashboard</li>
+            </ul>
+        </div>
+
+        <div id="footer-placeholder"></div>
+    </div>
+
+    <script src="footerscript.js"></script>
+    <script src="../language.js"></script>
+</body>
+
+</html>

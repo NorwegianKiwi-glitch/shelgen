@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Raspberry Pi System Information</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function fetchSystemInfo() {
+            $.get('system_info.txt', function (data) {
+                $('#systemInfo').html(data.replace(/\n/g, '<br>'));
+            });
+        }
+        $(document).ready(function () {
+            fetchSystemInfo();
+            setInterval(fetchSystemInfo, 300000); // Refresh every 5 minutes
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="grid-background min-h-screen flex items-center justify-center p-8">
+    <div class="max-w-2xl w-full">
+        <!-- Back Button -->
+        <div class="mb-8 fade-in">
+            <a href="index.html"
+                class="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-300 group">
+                <svg class="w-5 h-5 mr-2 transition-transform duration-300 group-hover:-translate-x-1" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span
+                    class="text-lg font-light border-b border-transparent group-hover:border-white transition-all duration-300">Back
+                    to Portfolio</span>
+            </a>
+        </div>
+
+        <div class="text-center mb-16 fade-in">
+            <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Webserver information</h1>
+            <p id="desc" class="text-gray-400 text-lg font-light">Overview of system status and configuration.</p>
+            <div class="text-gray-400 text-lg font-light">
+                <p id="systemInfo">Loading...</p>
+            </div>
+        </div>
+
+        <div id="footer-placeholder"></div>
+    </div>
+
+    <script src="footerscript.js"></script>
+    <script src="../language.js"></script>
+</body>
+
+</html>
