@@ -22,7 +22,7 @@ app.get('/exitnode.html', (req, res) => {
 
 // add more routes similarly:
 app.get('/info', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'system_info.html'));
+  res.sendFile(path.join(__dirname, 'public', 'info.html'));
 });
 
 app.listen(port, '0.0.0.0', () => {
