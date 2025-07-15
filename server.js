@@ -16,8 +16,9 @@ app.get('/exitnode', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'exitnode.html'));
 });
 
-app.get('/exitnode.html', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'exitnode.html'));
+// serve language.js from root
+app.get('/language.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'language.js'));
 });
 
 // add more routes similarly:
@@ -26,6 +27,6 @@ app.get('/info', (req, res) => {
 });
 
 app.listen(port, '0.0.0.0', () => {
-  console.log(`Server listening at http://192.168.1.217:${port}`);
+  console.log(`Server listening at http://192.168.1.174:${port}`);
 });
 
