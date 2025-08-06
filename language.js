@@ -88,7 +88,45 @@ const translations = {
         footer: {
             about: "About this page.",
         },
-        toggle: "Norsk"
+        toggle: "Norsk",
+        cv: {
+            cv_title: "About Me",
+            cv_name: "Simon Helgen",
+            cv_background_title: "Background",
+            cv_background_desc: "I am currently a master’s student specializing in cybersecurity management, working toward a future career in the cybersecurity field. My passion for IT and cybersecurity stems from a desire to improve the relationship between humans and computers. I aspire to make technology a more useful, accessible, and reliable tool that simplifies our daily lives. My goal is to contribute to building secure and user-friendly digital environments for everyone.",
+            cv_skills_title: "Skills & Expertise",
+            cv_frontend_title: "Frontend",
+            cv_frontend_desc: "HTML, Javascript, Flask, Tailwind CSS",
+            cv_backend_title: "Backend",
+            cv_backend_desc: "Node.js, Python, Nginx, mySQL",
+            cv_devops_title: "DevOps",
+            cv_devops_desc: "Docker, Azure, Git, Github",
+            cv_leisure_title: "When I'm Not Coding",
+            cv_leisure_desc: "In my free time, I enjoy exploring new technologies, staying curious about the latest innovations and tools. I’m also passionate about fitness, dedicating time to working out regularly to stay active and healthy. Additionally, I like to bouldering, challenging myself physically and mentally while enjoying the thrill of climbing.",
+            cv_edu_exp_title: "Education & Experience",
+            cv_edu_title: "Education & Certifications",
+            cv_edu_masters_title: "Master of cybersecurity management",
+            cv_edu_masters_place: "University of Agder • 2025-2027",
+            cv_edu_masters_desc: "Focus practical and theoretical knowledge, as well as methodological skills for implementing and managing security measures in organizations nationally and internationally",
+            cv_edu_bachelor_title: "Bachelor of IT and information systems",
+            cv_edu_bachelor_place: "University of Agder • 2022-2025",
+            cv_edu_bachelor_desc: "Gain essential skills to analyze user needs, design and develop IT systems, understand their role in organizations and society, and support effective use of information systems to achieve goals.",
+            cv_edu_highschool_title: "Bachelor of IT and information systems",
+            cv_edu_highschool_place: "Skien High school • 2017-2019",
+            cv_edu_highschool_desc: "Information comunnication technology (ICT).",
+            cv_edu_google_title: "Working towards: Google Cybersecurity Professional Certificate",
+            cv_edu_google_place: "Google Cybersecurity Professional • 2025",
+            cv_work_title: "Work Experience",
+            cv_work_internship_title: "Internship digitization",
+            cv_work_internship_place: "Kristiansand Municipality • Sep.2024 - Des.2024",
+            cv_work_internship_desc: "Digitize municipal citizen services like “Min Side” and meeting bookings, automate planning and building processes, train staff in digital systems, and manage the website through a CMS.",
+            cv_work_summer_title: "Summer internship",
+            cv_work_summer_place: "Skagerak Energi AS • Jun.2023 - Aug.2023",
+            cv_work_summer_desc: "Tested and rolled out Windows 11 upgrade, and Communicated with employees and project managers for a smooth transition from Windows 10 to Windows 11, using Intune for the rollout.",
+            cv_work_ikt_title: "IKT lærling",
+            cv_work_ikt_place: "Forsvarets høgskole • 2019 - 2021",
+            cv_work_ikt_desc: "ICT Service Operations og local user administrator ICT"
+        },
     },
     no: {
         index: {
@@ -179,7 +217,45 @@ const translations = {
         footer: {
             about: "Om denne siden.",
         },
-        toggle: "English"
+        toggle: "English",
+        cv: {
+            cv_title: "Om meg",
+            cv_name: "Simon Helgen",
+            cv_background_title: "Bakgrunn",
+            cv_background_desc: "Jeg er for tiden masterstudent med spesialisering i cybersikkerhetsledelse, og jobber mot en fremtidig karriere innen cybersikkerhet. Min lidenskap for IT og cybersikkerhet kommer fra et ønske om å forbedre forholdet mellom mennesker og datamaskiner. Jeg ønsker å gjøre teknologi til et mer nyttig, tilgjengelig og pålitelig verktøy som forenkler hverdagen vår. Målet mitt er å bidra til å bygge sikre og brukervennlige digitale miljøer for alle.",
+            cv_skills_title: "Ferdigheter og kompetanse",
+            cv_frontend_title: "Frontend",
+            cv_frontend_desc: "HTML, Javascript, Flask, Tailwind CSS",
+            cv_backend_title: "Backend",
+            cv_backend_desc: "Node.js, Python, Nginx, mySQL",
+            cv_devops_title: "DevOps",
+            cv_devops_desc: "Docker, Azure, Git, Github",
+            cv_leisure_title: "Når jeg ikke koder",
+            cv_leisure_desc: "På fritiden liker jeg å utforske ny teknologi og holde meg nysgjerrig på de siste innovasjonene og verktøyene. Jeg er også opptatt av trening, og setter av tid til å trene regelmessig for å holde meg aktiv og sunn. I tillegg liker jeg buldring, hvor jeg utfordrer meg selv både fysisk og mentalt, og nyter spenningen ved klatring.",
+            cv_edu_exp_title: "Utdanning og erfaring",
+            cv_edu_title: "Utdanning og sertifiseringer",
+            cv_edu_masters_title: "Master i cybersikkerhetsledelse",
+            cv_edu_masters_place: "Universitetet i Agder • 2025-2027",
+            cv_edu_masters_desc: "Fokus på praktisk og teoretisk kunnskap, samt metodiske ferdigheter for å implementere og lede sikkerhetstiltak i organisasjoner nasjonalt og internasjonalt",
+            cv_edu_bachelor_title: "Bachelor i IT og informasjonssystemer",
+            cv_edu_bachelor_place: "Universitetet i Agder • 2022-2025",
+            cv_edu_bachelor_desc: "Tilegn deg essensielle ferdigheter for å analysere brukerbehov, designe og utvikle IT-systemer, forstå deres rolle i organisasjoner og samfunn, og støtte effektiv bruk av informasjonssystemer for å nå mål.",
+            cv_edu_highschool_title: "Informasjonsteknologi (IT) og informasjonssystemer",
+            cv_edu_highschool_place: "Skien videregående skole • 2017-2019",
+            cv_edu_highschool_desc: "Informasjons- og kommunikasjonsteknologi (IKT).",
+            cv_edu_google_title: "Jobber mot: Google Cybersecurity Professional Certificate",
+            cv_edu_google_place: "Google Cybersecurity Professional • 2025",
+            cv_work_title: "Arbeidserfaring",
+            cv_work_internship_title: "Digitaliseringspraksis",
+            cv_work_internship_place: "Kristiansand kommune • sep.2024 - des.2024",
+            cv_work_internship_desc: "Digitalisere kommunale innbyggertjenester som “Min Side” og møtebooking, automatisere plan- og byggesaksprosesser, opplæring av ansatte i digitale systemer og administrere nettsiden via CMS.",
+            cv_work_summer_title: "Sommerjobb",
+            cv_work_summer_place: "Skagerak Energi AS • jun.2023 - aug.2023",
+            cv_work_summer_desc: "Testet og rullet ut Windows 11-oppgradering, og kommuniserte med ansatte og prosjektledere for en smidig overgang fra Windows 10 til Windows 11, med bruk av Intune.",
+            cv_work_ikt_title: "IKT-lærling",
+            cv_work_ikt_place: "Forsvarets høgskole • 2019 - 2021",
+            cv_work_ikt_desc: "IKT-drift og lokal brukeradministrator IKT"
+        },
     }
 };
 
@@ -192,7 +268,8 @@ function getPageKey() {
         "iot.html": "IoT",
         "noested.html": "noested",
         "system_info.html": "system_info",
-        "footer.html": "footer"
+        "footer.html": "footer",
+        "cv.html": "cv",
     };
     const file = window.location.pathname.split('/').pop().toLowerCase();
     return map[file] || "index";
