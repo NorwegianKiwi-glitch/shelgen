@@ -3,6 +3,7 @@ const translations = {
         index: {
             title: "Portfolio",
             subtitle: "Selected Works & Projects",
+            cv: "View full CV",
             projects: [
                 {
                     title: "Evacuation system",
@@ -93,6 +94,7 @@ const translations = {
         index: {
             title: "Portefølje",
             subtitle: "Utvalgte arbeider og prosjekter",
+            cv: "Se full CV",
             projects: [
                 {
                     title: "Evakueringssystem",
