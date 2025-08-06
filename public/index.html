@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,24 @@
     <link rel="alternate" hreflang="en" href="index.html" />
     <link rel="alternate" hreflang="no" href="index.html?lang=no" />
 </head>
+
 <body class="grid-background min-h-screen flex items-center justify-center p-8">
-    <div class="max-w-2xl w-full">    
-    <!-- Header -->
+    <div class="max-w-2xl w-full">
+        <!-- Header -->
         <div class="text-center mb-16 fade-in">
             <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Portfolio</h1>
             <p id="subtitle" class="text-gray-400 text-lg font-light">Selected Works & Projects</p>
+            <div class="mt-8">
+                <a href="CV.html" id="cv"
+                    class="inline-flex items-center px-8 py-3 bg-white bg-opacity-15 text-white border-2 border-white border-opacity-30 rounded-lg hover:bg-opacity-25 hover:border-opacity-50 transition-all duration-300 text-base font-medium shadow-lg">
+                    <!--<svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                        </path>
+                    </svg> -->
+                    View Full CV
+                </a>
+            </div>
         </div>
 
         <!-- Projects List -->
@@ -24,19 +37,21 @@
                     <div class="flex justify-between items-center">
                         <div>
                             <h3 id="title" class="text-xl font-medium text-white mb-2">Evacuation system</h3>
-                            <p id="desc" class="text-gray-400 text-sm">Python flask web app with biometric and RFID scanning in emergency situations</p>
+                            <p id="desc" class="text-gray-400 text-sm">Python flask web app with biometric and RFID
+                                scanning in emergency situations</p>
                         </div>
                         <div class="text-gray-500 text-sm">2024</div>
                     </div>
                 </div>
             </a>
-            
+
             <a href="IoT.html">
                 <div class="project-item p-6 rounded-lg fade-in">
                     <div class="flex justify-between items-center">
                         <div>
                             <h3 class="text-xl font-medium text-white mb-2">AI drone protection system</h3>
-                            <p class="text-gray-400 text-sm">IOT AI computer vision powered robot that detects and shoots drone</p>
+                            <p class="text-gray-400 text-sm">IOT AI computer vision powered robot that detects and
+                                shoots drone</p>
                         </div>
                         <div class="text-gray-500 text-sm">2023</div>
                     </div>
@@ -48,7 +63,8 @@
                     <div class="flex justify-between items-center">
                         <div>
                             <h3 class="text-xl font-medium text-white mb-2">Web based note taking application</h3>
-                            <p class="text-gray-400 text-sm">Simple to use notetaking application made by Python flask and styled with tailwindcss</p>
+                            <p class="text-gray-400 text-sm">Simple to use notetaking application made by Python flask
+                                and styled with tailwindcss</p>
                         </div>
                         <div class="text-gray-500 text-sm">2023</div>
                     </div>
@@ -66,7 +82,7 @@
                     </div>
                 </div>
             </a>
-            
+
             <div class="project-item p-6 rounded-lg fade-in">
                 <div class="flex justify-between items-center">
                     <div>
@@ -77,11 +93,12 @@
                 </div>
             </div>
         </div>
-        
+
         <div id="footer-placeholder"></div>
     </div>
 
     <script src="/footerscript.js"></script>
     <script src="/language.js"></script>
 </body>
+
 </html>
