@@ -21,4 +21,6 @@ To run ``pm2 start server.js``
 
 Auto start on boot ``pm2 startup systemd``
 
+This command will show you another command to run (something like ``sudo env PATH=$PATH:/usr/bin pm2 startup systemd -u pi --hp /home/pi). Copy-paste and run it.``
+
 save your current PM2 process list ``pm2 save``
