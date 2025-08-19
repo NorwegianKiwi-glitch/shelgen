@@ -12,4 +12,13 @@ Start Tailwind CLI build process ``npm install tailwindcss @tailwindcss/cli``
 
 ``npm install express --save``
 
-to run the server write in console ``node server.js``
+### Run webserver
+simple run, stops when terminal is closed ``node server.js``
+
+too keep the server running when closing terminal I use PM2
+
+To run ``pm2 start server.js``
+
+Auto start on boot ``pm2 startup systemd``
+
+save your current PM2 process list ``pm2 save``
