@@ -103,7 +103,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "build:css": "tailwindcss -i ./src/input.css -o ./public/style.css --minify",
-    "watch:css": "tailwindcss -i ./src/input.css -o ./public/style.css --watch"
+    "watch:css": "tailwindcss -i ./src/input.css -o ./public/style.css --watch",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

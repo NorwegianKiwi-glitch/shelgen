@@ -27,6 +27,6 @@ app.get('/info', (req, res) => {
 });
 
 app.listen(port, '0.0.0.0', () => {
-  console.log(`Server listening at http://192.168.1.174:${port}`);
+  console.log(`Server listening at localhost:${port}`);
 });
 
