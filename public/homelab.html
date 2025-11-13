@@ -28,16 +28,44 @@
         <!-- Header -->
         <div class="text-center mb-16 fade-in">
             <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Homelab</h1>
-            <p id="desc" class="text-gray-400 text-lg font-light">Current and future homelab setup and projects under work</p>
-            <p id="hardware" class="text-gray-400 text-lg font-light">Hardware</p>
-            <ul id="hardware_list" class="list-disc list-inside text-gray-400 text-lg font-light">
-                <li>Raspberry pi 4 8gb ram </li>
-            </ul>
-            <p id="services" class="text-gray-400 text-lg font-light">Services</p>
-            <ul id="services_list" class="list-disc list-inside text-gray-400 text-lg font-light">
-                <li>Webserver (shelgen.no)</li>
-                <li>NAS</li>
-            </ul>
+            <p id="desc" class="text-gray-400 text-lg font-light">Current and future homelab setup and projects under work.</p>
+            <div class="mt-6 md:grid md:grid-cols-2 md:gap-6">
+                <!-- Hardware card -->
+                <section id="hardware" class="mb-6 md:mb-0 bg-gray-900/60 border border-gray-800 rounded-lg p-6">
+                    <h2 class="text-white text-2xl font-medium mb-2 flex items-center">
+                        <!-- simple device icon -->
+                        <svg class="w-6 h-6 mr-2 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        Hardware (physical devices)
+                    </h2>
+                    <p class="text-gray-400 text-sm mb-3">Physical devices that host services or are part of the homelab.</p>
+                    <ul id="hardware_list" class="list-disc list-inside text-gray-200 text-lg font-light">
+                        <li>Raspberry Pi 4 8 GB RAM</li>
+                        <li>250GB SSD external</li>
+                    </ul>
+                </section>
+
+                <!-- Services card -->
+                <section id="services" class="bg-gray-900/60 border border-gray-800 rounded-lg p-6">
+                    <h2 class="text-white text-2xl font-medium mb-2 flex items-center">
+                        <!-- simple server/app icon -->
+                        <svg class="w-6 h-6 mr-2 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        Services (software & hosted apps)
+                    </h2>
+                    <p class="text-gray-400 text-sm mb-3">Applications and services running on the homelab hardware - what I'm hosting or experimenting with.</p>
+                    <ul id="services_list" class="list-disc list-inside text-gray-200 text-lg font-light">
+                        <li>Webserver (shelgen.no)</li>
+                        <li>Nextcloud</li>
+                        <li>Password manager</li>
+                        <li>Immich</li>
+                        <li>Jellyfin</li>
+                        <li>Under work: Multi Factor Authentication</li>
+                    </ul>
+                </section>
+            </div>
         </div>
 
         <div id="footer-placeholder"></div>

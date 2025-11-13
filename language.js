@@ -146,10 +146,10 @@ const translations = {
       cv_work_summer_place: "Skagerak Energi AS • Jun.2023 - Aug.2023",
       cv_work_summer_desc:
         "Tested and rolled out Windows 11 upgrade, and Communicated with employees and project managers for a smooth transition from Windows 10 to Windows 11, using Intune for the rollout.",
-      cv_work_ikt_title: "IKT lærling",
-      cv_work_ikt_place: "Forsvarets høgskole • 2019 - 2021",
+      cv_work_ikt_title: "ICT apprentice",
+      cv_work_ikt_place: "The Norwegian Defence University College • 2019 - 2021",
       cv_work_ikt_desc:
-        "ICT Service Operations og local user administrator ICT",
+        "ICT Service Operations and local user administrator ICT",
     },
   },
   no: {
@@ -236,12 +236,17 @@ const translations = {
       desc: "Nåverende og fremtidige oppsett hjemmelab oppsett og prosjekter under utvikling",
       hardware: "Maskinvare",
       hardware_list: [
-        "Raspberry pi 4 8gb ram"
+        "Raspberry pi 4 8gb ram",
+        "250GB SSD external"
     ],
       services: "Tjenester",
       services_list: [
         "Webserver (shelgen.no)",
-        "NAS"
+        "Nextcloud",
+        "Password manager",
+        "Immich",
+        "Jellyfin",
+        "Under work: Multi Factor Authentication"
     ],
       back: "Back to Portfolio",
     },
