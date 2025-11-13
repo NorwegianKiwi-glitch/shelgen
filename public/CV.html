@@ -9,33 +9,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="grid-background min-h-screen flex items-center justify-center p-8">
+<body class="grid-background min-h-screen flex items-center justify-center p-4 md:p-8">
     <div class="max-w-2xl w-full">
         <!-- Back Button -->
         <div class="mb-8 fade-in">
             <a href="index.html"
-                class="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-300 group">
+                class="inline-flex items-center text-slate-300 hover:text-white transition-colors duration-300 group">
                 <svg class="w-5 h-5 mr-2 transition-transform duration-300 group-hover:-translate-x-1" fill="none"
                     stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                 </svg>
                 <span
-                    class="text-lg font-light border-b border-transparent group-hover:border-white transition-all duration-300">Back
+                    class="text-lg font-light border-b border-transparent group-hover:border-blue-500 transition-all duration-300">Back
                     to Portfolio</span>
             </a>
         </div>
 
         <!-- Header -->
         <div class="text-center mb-16 fade-in">
-            <h1 id="cv_title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">About Me</h1>
-            <p id="cv_name" class="text-gray-400 text-lg font-light">Simon Helgen</p>
+            <h1 id="cv_title" class="text-5xl md:text-6xl font-bold text-white mb-4 title-glow">About Me</h1>
+            <p id="cv_name" class="text-slate-300 text-lg font-medium">Simon Helgen</p>
         </div>
 
         <!-- About Sections -->
-        <div class="space-y-1">
+        <div class="space-y-3">
             <div class="about-section p-6 rounded-lg fade-in">
-                <h3 id="cv_background_title" class="text-xl font-medium text-white mb-4">Background</h3>
-                <p id="cv_background_desc" class="text-gray-400 text-sm leading-relaxed">
+                <h3 id="cv_background_title" class="text-xl font-semibold text-white mb-4">Background</h3>
+                <p id="cv_background_desc" class="text-slate-300 text-sm leading-relaxed">
                     I am currently a master’s student specializing in cybersecurity management, working toward a future
                     career in the cybersecurity field. My passion for IT and cybersecurity stems from a desire to
                     improve the relationship between humans and computers. I aspire to make technology a more useful,
@@ -45,26 +45,26 @@
             </div>
 
             <div class="about-section p-6 rounded-lg fade-in">
-                <h3 id="cv_skills_title" class="text-xl font-medium text-white mb-4">Skills & Expertise</h3>
-                <div class="grid grid-cols-2 gap-4 text-gray-400 text-sm">
+                <h3 id="cv_skills_title" class="text-xl font-semibold text-white mb-4">Skills & Expertise</h3>
+                <div class="grid grid-cols-2 gap-4 text-slate-300 text-sm">
                     <div>
-                        <p id="cv_frontend_title" class="font-medium text-white mb-2">Frontend</p>
+                        <p id="cv_frontend_title" class="font-semibold text-white mb-2">Frontend</p>
                         <p id="cv_frontend_desc">HTML, Javascript, Flask, Tailwind CSS</p>
                     </div>
                     <div>
-                        <p id="cv_backend_title" class="font-medium text-white mb-2">Backend</p>
+                        <p id="cv_backend_title" class="font-semibold text-white mb-2">Backend</p>
                         <p id="cv_backend_desc">Node.js, Python, Nginx, mySQL</p>
                     </div>
                     <div>
-                        <p id="cv_devops_title" class="font-medium text-white mb-2">DevOps</p>
+                        <p id="cv_devops_title" class="font-semibold text-white mb-2">DevOps</p>
                         <p id="cv_devops_desc">Docker, Azure, Git, Github</p>
                     </div>
                 </div>
             </div>
 
             <div class="about-section p-6 rounded-lg fade-in">
-                <h3 id="cv_leisure_title" class="text-xl font-medium text-white mb-4">When I'm Not Coding</h3>
-                <p id="cv_leisure_desc" class="text-gray-400 text-sm leading-relaxed">
+                <h3 id="cv_leisure_title" class="text-xl font-semibold text-white mb-4">When I'm Not Coding</h3>
+                <p id="cv_leisure_desc" class="text-slate-300 text-sm leading-relaxed">
                     In my free time, I enjoy exploring new technologies, staying curious about the latest innovations
                     and tools. I’m also passionate about fitness, dedicating time to working out regularly to stay
                     active and healthy. Additionally, I like to bouldering, challenging myself physically and mentally
@@ -74,62 +74,62 @@
         </div>
 
         <div class="about-section p-6 rounded-lg fade-in">
-            <h3 id="cv_edu_exp_title" class="text-xl font-medium text-white mb-6">Education & Experience</h3>
+            <h3 id="cv_edu_exp_title" class="text-xl font-semibold text-white mb-6">Education & Experience</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Education & Certifications -->
                 <div>
-                    <h4 id="cv_edu_title" class="text-lg font-medium text-white mb-4 border-b border-gray-600 pb-2">Education &
+                    <h4 id="cv_edu_title" class="text-lg font-semibold text-white mb-4 border-b border-blue-500/30 pb-2">Education &
                         Certifications</h4>
                     <div class="space-y-4">
                         <div>
-                            <p id="cv_edu_masters_title" class="font-medium text-white mb-1">Master of cybersecurity management</p>
-                            <p id="cv_edu_masters_place" class="text-gray-400 text-sm">University of Agder • 2025-2027</p>
-                            <p id="cv_edu_masters_desc" class="text-gray-400 text-sm">Focus practical and theoretical knowledge, as well as
+                            <p id="cv_edu_masters_title" class="font-semibold text-white mb-1">Master of cybersecurity management</p>
+                            <p id="cv_edu_masters_place" class="text-slate-400 text-sm">University of Agder • 2025-2027</p>
+                            <p id="cv_edu_masters_desc" class="text-slate-300 text-sm">Focus practical and theoretical knowledge, as well as
                                 methodological skills for implementing and managing security measures in organizations
                                 nationally and internationally</p>
                         </div>
                         <div>
-                            <p id="cv_edu_bachelor_title" class="font-medium text-white mb-1">Bachelor of IT and information systems</p>
-                            <p id="cv_edu_bachelor_place" class="text-gray-400 text-sm">University of Agder • 2022-2025</p>
-                            <p id="cv_edu_bachelor_desc" class="text-gray-400 text-sm">Gain essential skills to analyze user needs, design and
+                            <p id="cv_edu_bachelor_title" class="font-semibold text-white mb-1">Bachelor of IT and information systems</p>
+                            <p id="cv_edu_bachelor_place" class="text-slate-400 text-sm">University of Agder • 2022-2025</p>
+                            <p id="cv_edu_bachelor_desc" class="text-slate-300 text-sm">Gain essential skills to analyze user needs, design and
                                 develop IT systems, understand their role in organizations and society, and support
                                 effective use of information systems to achieve goals.</p>
                         </div>
                         <div>
-                            <p id="cv_edu_highschool_title" class="font-medium text-white mb-1">Bachelor of IT and information systems</p>
-                            <p id="cv_edu_highschool_place" class="text-gray-400 text-sm">Skien High school • 2017-2019</p>
-                            <p id="cv_edu_highschool_desc" class="text-gray-400 text-sm">Information comunnication technology (ICT).</p>
+                            <p id="cv_edu_highschool_title" class="font-semibold text-white mb-1">Bachelor of IT and information systems</p>
+                            <p id="cv_edu_highschool_place" class="text-slate-400 text-sm">Skien High school • 2017-2019</p>
+                            <p id="cv_edu_highschool_desc" class="text-slate-300 text-sm">Information comunnication technology (ICT).</p>
                         </div>
                         <div>
-                            <p id="cv_edu_google_title" class="font-medium text-white mb-1">Working towards: Google Cybersecurity Professional
+                            <p id="cv_edu_google_title" class="font-semibold text-white mb-1">Working towards: Google Cybersecurity Professional
                                 Certificate</p>
-                            <p id="cv_edu_google_place" class="text-gray-400 text-sm">Google Cybersecurity Professional • 2025</p>
+                            <p id="cv_edu_google_place" class="text-slate-400 text-sm">Google Cybersecurity Professional • 2025</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Work Experience -->
                 <div>
-                    <h4 id="cv_work_title" class="text-lg font-medium text-white mb-4 border-b border-gray-600 pb-2">Work Experience</h4>
+                    <h4 id="cv_work_title" class="text-lg font-semibold text-white mb-4 border-b border-blue-500/30 pb-2">Work Experience</h4>
                     <div class="space-y-4">
                         <div>
-                            <p id="cv_work_internship_title" class="font-medium text-white mb-1">Internship digitization</p>
-                            <p id="cv_work_internship_place" class="text-gray-400 text-sm">Kristiansand Municipality • Sep.2024 - Des.2024</p>
-                            <p id="cv_work_internship_desc" class="text-gray-400 text-sm">Digitize municipal citizen services like “Min Side” and
+                            <p id="cv_work_internship_title" class="font-semibold text-white mb-1">Internship digitization</p>
+                            <p id="cv_work_internship_place" class="text-slate-400 text-sm">Kristiansand Municipality • Sep.2024 - Des.2024</p>
+                            <p id="cv_work_internship_desc" class="text-slate-300 text-sm">Digitize municipal citizen services like “Min Side” and
                                 meeting bookings, automate planning and building processes, train staff in digital
                                 systems, and manage the website through a CMS.</p>
                         </div>
                         <div>
-                            <p id="cv_work_summer_title" class="font-medium text-white mb-1">Summer internship</p>
-                            <p id="cv_work_summer_place" class="text-gray-400 text-sm">Skagerak Energi AS • Jun.2023 - Aug.2023</p>
-                            <p id="cv_work_summer_desc" class="text-gray-400 text-sm">Tested and rolled out Windows 11 upgrade, and Communicated
+                            <p id="cv_work_summer_title" class="font-semibold text-white mb-1">Summer internship</p>
+                            <p id="cv_work_summer_place" class="text-slate-400 text-sm">Skagerak Energi AS • Jun.2023 - Aug.2023</p>
+                            <p id="cv_work_summer_desc" class="text-slate-300 text-sm">Tested and rolled out Windows 11 upgrade, and Communicated
                                 with employees and project managers for a smooth transition from Windows 10 to Windows
                                 11, using Intune for the rollout.</p>
                         </div>
                         <div>
-                            <p id="cv_work_ikt_title" class="font-medium text-white mb-1">IKT lærling</p>
-                            <p id="cv_work_ikt_place" class="text-gray-400 text-sm">Forsvarets høgskole • 2019 - 2021</p>
-                            <p id="cv_work_ikt_desc" class="text-gray-400 text-sm">ICT Service Operations og local user administrator ICT</p>
+                            <p id="cv_work_ikt_title" class="font-semibold text-white mb-1">IKT lærling</p>
+                            <p id="cv_work_ikt_place" class="text-slate-400 text-sm">Forsvarets høgskole • 2019 - 2021</p>
+                            <p id="cv_work_ikt_desc" class="text-slate-300 text-sm">ICT Service Operations og local user administrator ICT</p>
                         </div>
                     </div>
                 </div>

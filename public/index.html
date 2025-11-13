@@ -12,42 +12,40 @@
 </head>
 
 
-<body class="grid-background min-h-screen flex items-center justify-center p-8">
-    <div class="max-w-2xl w-full">
-        <!-- Header -->
+<body class="grid-background min-h-screen flex items-center justify-center p-4 md:p-8">
     <div class="max-w-2xl w-full">
         <!-- Header -->
         <div class="text-center mb-16 fade-in">
-            <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Portfolio</h1>
-            <p id="subtitle" class="text-gray-400 text-lg font-light">
+            <h1 id="title" class="text-5xl md:text-6xl font-bold text-white mb-4 title-glow">Portfolio</h1>
+            <p id="subtitle" class="text-slate-300 text-lg font-light leading-relaxed max-w-lg mx-auto">
                 This portfolio is made by and hosted by myself, Simon Helgen. 
-                I am a student at the University of Agder and are currently taking my master’s degree in cybersecurity management
-                This website is made to showcase my current and previous work to friends, colleagues and potential employers
+                I am a student at the University of Agder and am currently taking my master's degree in cybersecurity management.
+                This website showcases my current and previous work to friends, colleagues, and potential employers.
             </p>
             <div class="mt-8">
                 <a href="CV.html" id="cv"
-                    class="inline-flex items-center px-8 py-3 bg-white bg-opacity-15 text-white border-2 border-white border-opacity-30 rounded-lg hover:bg-opacity-25 hover:border-opacity-50 transition-all duration-300 text-base font-medium shadow-lg">
-                    <!--<svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 text-base font-semibold shadow-lg hover:shadow-blue-500/50 hover:shadow-xl">
+                    <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
                         </path>
-                    </svg> -->
+                    </svg>
                     View Full CV
                 </a>
             </div>
         </div>
 
         <!-- Projects List -->
-        <div class="space-y-1">
+        <div class="space-y-3">
             <a href="exitnode">
                 <div class="project-item p-6 rounded-lg fade-in">
                     <div class="flex justify-between items-center">
                         <div>
-                            <h3 id="title" class="text-xl font-medium text-white mb-2">Evacuation system</h3>
-                            <p id="desc" class="text-gray-400 text-sm">Python flask web app with biometric and RFID
+                            <h3 id="title" class="text-xl font-semibold text-white mb-2">Evacuation system</h3>
+                            <p id="desc" class="text-slate-400 text-sm">Python flask web app with biometric and RFID
                                 scanning in emergency situations</p>
                         </div>
-                        <div class="text-gray-500 text-sm">2025</div>
+                        <div class="text-slate-500 text-sm font-medium">2025</div>
                     </div>
                 </div>
             </a>
@@ -56,11 +54,11 @@
                 <div class="project-item p-6 rounded-lg fade-in">
                     <div class="flex justify-between items-center">
                         <div>
-                            <h3 class="text-xl font-medium text-white mb-2">AI drone protection system</h3>
-                            <p class="text-gray-400 text-sm">IOT AI computer vision powered robot that detects and
+                            <h3 class="text-xl font-semibold text-white mb-2">AI drone protection system</h3>
+                            <p class="text-slate-400 text-sm">IOT AI computer vision powered robot that detects and
                                 shoots drone</p>
                         </div>
-                        <div class="text-gray-500 text-sm">2024</div>
+                        <div class="text-slate-500 text-sm font-medium">2024</div>
                     </div>
                 </div>
             </a>
@@ -69,11 +67,11 @@
                 <div class="project-item p-6 rounded-lg fade-in">
                     <div class="flex justify-between items-center">
                         <div>
-                            <h3 class="text-xl font-medium text-white mb-2">Web based note taking application</h3>
-                            <p class="text-gray-400 text-sm">Simple to use notetaking application made by Python flask
+                            <h3 class="text-xl font-semibold text-white mb-2">Web based note taking application</h3>
+                            <p class="text-slate-400 text-sm">Simple to use notetaking application made by Python flask
                                 and styled with tailwindcss</p>
                         </div>
-                        <div class="text-gray-500 text-sm">2024</div>
+                        <div class="text-slate-500 text-sm font-medium">2024</div>
                     </div>
                 </div>
             </a>
@@ -82,10 +80,10 @@
                 <div class="project-item p-6 rounded-lg fade-in">
                     <div class="flex justify-between items-center">
                         <div>
-                            <h3 class="text-xl font-medium text-white mb-2">Management repair system</h3>
-                            <p class="text-gray-400 text-sm">.NET MVC webapplication with login and auth</p>
+                            <h3 class="text-xl font-semibold text-white mb-2">Management repair system</h3>
+                            <p class="text-slate-400 text-sm">.NET MVC webapplication with login and auth</p>
                         </div>
-                        <div class="text-gray-500 text-sm">2023</div>
+                        <div class="text-slate-500 text-sm font-medium">2023</div>
                     </div>
                 </div>
             </a>
@@ -94,10 +92,10 @@
                 <div class="project-item p-6 rounded-lg fade-in">
                     <div class="flex justify-between items-center">
                         <div>
-                            <h3 class="text-xl font-medium text-white mb-2">Home lab</h3>
-                            <p class="text-gray-400 text-sm">My current and future home lab with servers and applications I am hosting my self</p>
+                            <h3 class="text-xl font-semibold text-white mb-2">Home lab</h3>
+                            <p class="text-slate-400 text-sm">My current and future home lab with servers and applications I am hosting my self</p>
                         </div>
-                        <div class="text-gray-500 text-sm"></div>
+                        <div class="text-slate-500 text-sm font-medium"></div>
                     </div>
                 </div>
             </a>
