@@ -10,7 +10,7 @@
 </head>
 
 <body class="grid-background min-h-screen flex items-center justify-center p-8">
-    <div class="max-w-2xl w-full">
+    <div class="max-w-3xl w-full">
         <!-- Back Button -->
         <div class="mb-8 fade-in">
             <a href="index.html" class="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-300 group">
@@ -22,22 +22,226 @@
         </div>
 
         <!-- Header -->
+        <div class="text-center mb-12 fade-in">
+            <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Sentinal - self-hosted SOAR for your homelab</h1>
+            <p id="desc" class="text-gray-400 text-lg font-light">Scans your Docker containers for CVEs, has AI explain the findings, and lets you approve, snooze, or refuse remediation from a web console.</p>
+        </div>
+
+        <!-- Blog-style intro -->
+        <div class="about-section rounded-2xl p-8 mb-8 fade-in">
+            <div class="flex items-center mb-4">
+                <span class="text-4xl mr-4">⚙️➡️🐍</span>
+                <h2 class="text-2xl font-light text-white">From an n8n workflow to real, tested code</h2>
+            </div>
+            <p class="text-gray-400 text-lg font-light leading-relaxed">
+                Sentinal started as an <span class="text-white">n8n</span> workflow prototype, wiring together
+                webhooks and nodes to watch a homelab Docker host. This rewrite does the same job, scan, explain,
+                wait for human input, log the outcome, as a proper <span class="text-white">Python</span> service: a Flask
+                console, a Postgres audit trail.
+            </p>
+        </div>
+
+        <!-- How it works diagram -->
+        <div class="about-section rounded-2xl p-8 mb-8 fade-in">
+            <h2 class="text-2xl font-light text-white mb-4 text-center">How it works</h2>
+            <figure class="m-0">
+                <svg viewBox="0 0 820 940" role="img"
+                    aria-label="Diagram of Sentinal's workflow: a scheduled or manual trigger scans running containers with Trivy; images with no findings are simply logged, while vulnerable images are explained by Gemini and turned into a Pending Decision. That decision is always shown on the Web Console and, if configured, mirrored to Discord. A human approves, snoozes, or refuses the fix from either UI, the choice is claimed atomically so both UIs can't act twice, and every outcome, patch applied, re-check deferred, or exception recorded, is written to a permanent Postgres audit log."
+                    style="max-width:100%;height:auto;display:block;margin:0 auto;font-family:inherit;">
+                    <defs>
+                        <marker id="soar-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
+                            orient="auto-start-reverse">
+                            <path d="M0,0 L10,5 L0,10 z" fill="#64748b" />
+                        </marker>
+                    </defs>
+
+                    <!-- connectors -->
+                    <g stroke="#64748b" stroke-width="1.5" fill="none">
+                        <line x1="410" y1="76" x2="410" y2="138" marker-end="url(#soar-arrow)" />
+                        <line x1="410" y1="196" x2="410" y2="258" marker-end="url(#soar-arrow)" />
+                        <line x1="540" y1="168" x2="578" y2="168" marker-end="url(#soar-arrow)" />
+                        <line x1="410" y1="316" x2="410" y2="378" marker-end="url(#soar-arrow)" />
+                        <line x1="330" y1="436" x2="200" y2="478" marker-end="url(#soar-arrow)" />
+                        <line x1="490" y1="436" x2="620" y2="478" marker-end="url(#soar-arrow)" />
+                        <line x1="200" y1="536" x2="330" y2="598" marker-end="url(#soar-arrow)" />
+                        <line x1="620" y1="536" x2="490" y2="598" marker-end="url(#soar-arrow)" />
+                        <line x1="320" y1="656" x2="160" y2="718" marker-end="url(#soar-arrow)" />
+                        <line x1="410" y1="656" x2="410" y2="718" marker-end="url(#soar-arrow)" />
+                        <line x1="500" y1="656" x2="660" y2="718" marker-end="url(#soar-arrow)" />
+                        <line x1="160" y1="784" x2="330" y2="838" marker-end="url(#soar-arrow)" />
+                        <line x1="410" y1="784" x2="410" y2="838" marker-end="url(#soar-arrow)" />
+                        <line x1="660" y1="784" x2="490" y2="838" marker-end="url(#soar-arrow)" />
+                    </g>
+
+                    <!-- arrow labels -->
+                    <g fill="#94a3b8" font-size="12" text-anchor="middle">
+                        <text x="470" y="232">HIGH/CRITICAL CVEs found</text>
+                        <text x="560" y="158">no CVEs</text>
+                        <text x="470" y="352">creates alert</text>
+                        <text x="230" y="452">always</text>
+                        <text x="590" y="452">if configured</text>
+                        <text x="185" y="700">Approve</text>
+                        <text x="440" y="700">Snooze N days</text>
+                        <text x="640" y="700">Refuse</text>
+                    </g>
+
+                    <!-- nodes -->
+                    <g font-family="inherit">
+                        <!-- A: trigger -->
+                        <rect x="280" y="20" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                            stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                        <text x="410" y="53" text-anchor="middle" fill="#e2e8f0" font-size="14">Scheduler or manual
+                            trigger</text>
+
+                        <!-- B: scan -->
+                        <rect x="280" y="140" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                            stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                        <text x="410" y="173" text-anchor="middle" fill="#e2e8f0" font-size="14">Scan containers with
+                            Trivy</text>
+
+                        <!-- B side: clean scan -->
+                        <rect x="580" y="140" width="200" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                            stroke="#94a3b8" stroke-opacity="0.35" stroke-width="1.5" />
+                        <text x="680" y="164" text-anchor="middle" fill="#e2e8f0" font-size="13">Clean scan</text>
+                        <text x="680" y="180" text-anchor="middle" fill="#94a3b8" font-size="11">logged, no action
+                            needed</text>
+
+                        <!-- C: AI explain -->
+                        <rect x="280" y="260" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                            stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                        <text x="410" y="293" text-anchor="middle" fill="#e2e8f0" font-size="14">Gemini explains the
+                            findings</text>
+
+                        <!-- D: pending decision -->
+                        <rect x="260" y="380" width="300" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                            stroke="#3b82f6" stroke-opacity="0.8" stroke-width="1.5" />
+                        <text x="410" y="413" text-anchor="middle" fill="#e2e8f0" font-size="14">Pending Decision
+                            created</text>
+
+                        <!-- E1: web console -->
+                        <rect x="60" y="480" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                            stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                        <text x="190" y="503" text-anchor="middle" fill="#e2e8f0" font-size="13">Web Console</text>
+                        <text x="190" y="519" text-anchor="middle" fill="#94a3b8" font-size="11">always
+                            available</text>
+
+                        <!-- E2: discord -->
+                        <rect x="500" y="480" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                            stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                        <text x="630" y="503" text-anchor="middle" fill="#e2e8f0" font-size="13">Discord
+                            (optional)</text>
+                        <text x="630" y="519" text-anchor="middle" fill="#94a3b8" font-size="11">mirrors the same
+                            buttons</text>
+
+                        <!-- F: human decides -->
+                        <rect x="230" y="600" width="360" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                            stroke="#3b82f6" stroke-opacity="0.8" stroke-width="1.5" />
+                        <text x="410" y="622" text-anchor="middle" fill="#e2e8f0" font-size="13">Human clicks Approve
+                            / Snooze / Refuse</text>
+                        <text x="410" y="639" text-anchor="middle" fill="#94a3b8" font-size="11">claimed atomically,
+                            no double actions</text>
+
+                        <!-- G1: approve -->
+                        <rect x="30" y="720" width="230" height="64" rx="10" fill="#0f172a" fill-opacity="0.5"
+                            stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                        <text x="145" y="748" text-anchor="middle" fill="#e2e8f0" font-size="13">Approve</text>
+                        <text x="145" y="765" text-anchor="middle" fill="#94a3b8" font-size="11">patch pulled &amp;
+                            container recreated</text>
+
+                        <!-- G2: snooze -->
+                        <rect x="295" y="720" width="230" height="64" rx="10" fill="#0f172a" fill-opacity="0.5"
+                            stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                        <text x="410" y="748" text-anchor="middle" fill="#e2e8f0" font-size="13">Snooze</text>
+                        <text x="410" y="765" text-anchor="middle" fill="#94a3b8" font-size="11">re-scan deferred N
+                            days</text>
+
+                        <!-- G3: refuse -->
+                        <rect x="560" y="720" width="230" height="64" rx="10" fill="#0f172a" fill-opacity="0.5"
+                            stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                        <text x="675" y="748" text-anchor="middle" fill="#e2e8f0" font-size="13">Refuse</text>
+                        <text x="675" y="765" text-anchor="middle" fill="#94a3b8" font-size="11">exception logged,
+                            review date set</text>
+
+                        <!-- H: audit log -->
+                        <rect x="260" y="840" width="300" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                            stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                        <text x="410" y="864" text-anchor="middle" fill="#e2e8f0" font-size="13">Audit log
+                            (Postgres)</text>
+                        <text x="410" y="880" text-anchor="middle" fill="#94a3b8" font-size="11">archived, never
+                            hard-deleted</text>
+                    </g>
+                </svg>
+                <figcaption class="text-gray-400 text-sm font-light text-center mt-4">
+                    A scan only reaches a human when something's actually wrong, and whatever they decide always
+                    ends up in the audit log.
+                </figcaption>
+            </figure>
+        </div>
+
+        <!-- Feature cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🔍</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">CVE scanning</h3>
+                <p class="text-gray-400 text-sm font-light">Trivy checks every running container against known vulnerabilities.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🤖</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">AI-explained findings</h3>
+                <p class="text-gray-400 text-sm font-light">Gemini turns raw CVE data into plain-language explanations.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🙋</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Web UI or Discord</h3>
+                <p class="text-gray-400 text-sm font-light">Approve, snooze, or refuse remediation from the web console alone, or mirror alerts and decisions into Discord, whichever you prefer.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🩹</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">One-click patching</h3>
+                <p class="text-gray-400 text-sm font-light">Apply Patch pulls a verified, safe upgrade tag for the vulnerable image.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">⬆️</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Confirm-gated major upgrades</h3>
+                <p class="text-gray-400 text-sm font-light">Bigger version bumps require explicit confirmation and a pre-upgrade backup.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">⏰</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Scheduled scans</h3>
+                <p class="text-gray-400 text-sm font-light">Configurable periodic scanning, editable from the console, no restart needed.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">📜</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Audit trail</h3>
+                <p class="text-gray-400 text-sm font-light">Every decision is logged to Postgres; the log can be archived, never hard-deleted.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🏠</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Self-hosted</h3>
+                <p class="text-gray-400 text-sm font-light">Runs on your own Docker host, e.g. CasaOS on a Raspberry Pi.</p>
+            </div>
+        </div>
+
         <div class="text-center mb-16 fade-in">
-            <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">SOAR Sentinal</h1>
-            <p id="desc" class="text-gray-400 text-lg font-light">n8n self hosted SOAR application with AI to check for updates and CVE's for docker containers running on casaOS server.</p>
-            <p id="features" class="text-gray-400 text-lg font-light">Features:</p>
-            <ul id="feature-list" class="list-disc list-inside text-gray-400 text-lg font-light">
-                <li>CVE scanning</li>
-                <li>Automated responses</li>
-                <li>AI integration</li>
-            </ul>
-            <p id="features" class="text-gray-400 text-lg font-light">WIP:</p>
-            <ul id="feature-list" class="list-disc list-inside text-gray-400 text-lg font-light">
-                <li>Snooze option</li>
-                <li>SSH patch option</li>
-                <li>Export of logs to a human readable format</li>
-                <li>Setup documentation for new users</li>
-            </ul>
+            <a href="https://github.com/NorwegianKiwi-glitch/sentinal-soar" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-300 group">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+                        0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755
+                        -1.09-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.833 2.807 1.304
+                        3.492.997.108-.775.42-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.93
+                        0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322
+                        3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.047.138 3.003.404
+                        2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176
+                        .77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.625-5.48 5.92
+                        .43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293
+                        0 .32.216.695.825.577C20.565 21.795 24 17.297 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span class="text-lg font-light border-b border-transparent group-hover:border-white transition-all duration-300">View
+                    on GitHub</span>
+            </a>
+        </div>
 
         <div id="footer-placeholder"></div>
     </div>
