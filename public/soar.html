@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="grid-background min-h-screen flex items-center justify-center p-8">
+<body class="grid-background min-h-screen flex items-center justify-center p-4 md:p-8">
     <div class="max-w-3xl w-full">
         <!-- Back Button -->
         <div class="mb-8 fade-in">
@@ -45,9 +45,10 @@
         <div class="about-section rounded-2xl p-8 mb-8 fade-in">
             <h2 class="text-2xl font-light text-white mb-4 text-center">How it works</h2>
             <figure class="m-0">
+                <div class="overflow-x-auto">
                 <svg viewBox="0 0 820 940" role="img"
                     aria-label="Diagram of Sentinal's workflow: a scheduled or manual trigger scans running containers with Trivy; images with no findings are simply logged, while vulnerable images are explained by Gemini and turned into a Pending Decision. That decision is always shown on the Web Console and, if configured, mirrored to Discord. A human approves, snoozes, or refuses the fix from either UI, the choice is claimed atomically so both UIs can't act twice, and every outcome, patch applied, re-check deferred, or exception recorded, is written to a permanent Postgres audit log."
-                    style="max-width:100%;height:auto;display:block;margin:0 auto;font-family:inherit;">
+                    style="min-width:640px;width:100%;height:auto;display:block;margin:0 auto;font-family:inherit;">
                     <defs>
                         <marker id="soar-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
                             orient="auto-start-reverse">
@@ -171,6 +172,7 @@
                             hard-deleted</text>
                     </g>
                 </svg>
+                </div>
                 <figcaption class="text-gray-400 text-sm font-light text-center mt-4">
                     A scan only reaches a human when something's actually wrong, and whatever they decide always
                     ends up in the audit log.
