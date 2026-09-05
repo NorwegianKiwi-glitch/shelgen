@@ -10,27 +10,227 @@
 </head>
 
 <body class="grid-background min-h-screen flex items-center justify-center p-4 md:p-8">
-    <div class="max-w-2xl w-full">
+    <div class="max-w-3xl w-full">
         <!-- Back Button -->
         <div class="mb-8 fade-in">
-            <a href="index.html" class="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-300 group">
-                <svg class="w-5 h-5 mr-2 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <a href="index.html"
+                class="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-300 group">
+                <svg class="w-5 h-5 mr-2 transition-transform duration-300 group-hover:-translate-x-1" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                 </svg>
-                <span class="text-lg font-light border-b border-transparent group-hover:border-white transition-all duration-300">Back to Portfolio</span>
+                <span
+                    class="text-lg font-light border-b border-transparent group-hover:border-white transition-all duration-300">Back
+                    to Portfolio</span>
             </a>
         </div>
 
         <!-- Header -->
-        <div class="text-center mb-16 fade-in">
-            <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">AI drone protection system</h1>
-            <p id="desc" class="text-gray-400 text-lg font-light">IOT AI computer vision powered robot that detects and shoots drone</p>
-            <p id="features" class="text-gray-400 text-lg font-light">Features:</p>
-            <ul id="feature-list" class="list-disc list-inside text-gray-400 text-lg font-light">
-                <li>Real-time drone detection</li>
-                <li>Automated response</li>
-                <li>Remote monitoring</li>
-            </ul>
+        <div class="text-center mb-12 fade-in">
+            <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">AI drone protection
+                system</h1>
+            <p id="desc" class="text-gray-400 text-lg font-light">A computer-vision-guided Nerf turret, mounted on a
+                motorized vehicle, that detects drones and automatically fires on them.</p>
+        </div>
+
+        <!-- Tech stack -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8 fade-in">
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">Python</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">YOLOv8</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">Computer Vision</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">Arduino (C++)</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">3D-printed parts</span>
+        </div>
+
+        <!-- Blog-style intro -->
+        <div class="about-section rounded-2xl p-8 mb-8 fade-in">
+            <div class="flex items-center mb-4">
+                <span class="text-4xl mr-4">📷➡️🎯</span>
+                <h2 class="text-2xl font-light text-white">From a course assignment to an anti-drone turret</h2>
+            </div>
+            <p class="text-gray-400 text-lg font-light leading-relaxed">
+                Built as a group project for <span class="text-white">IS-313 Internet of Things</span>, a course
+                whose assignment was simply to build something with a positive impact on society. After digging
+                through Arduino's project gallery for inspiration, we landed on an automatic Nerf turret that uses
+                machine learning and computer vision to detect and neutralize drones. NERF darts stand in as a
+                proof-of-concept payload, showing that the system can reliably detect and hit a target.
+            </p>
+            <p class="text-gray-400 text-lg font-light leading-relaxed mt-4">
+                The idea was born in the autumn of 2024, when the course ran, watching small drones become a
+                decisive weapon on the battlefield in Ukraine. We wanted to build something that could help
+                civilians defend against similar threats before they cause damage to people or infrastructure, so
+                we mounted the turret on a motorized vehicle chassis to extend its patrol range beyond a single
+                fixed position.
+            </p>
+        </div>
+
+        <!-- Photo -->
+        <div class="about-section rounded-2xl p-4 mb-8 fade-in">
+            <img src="images/drone-turret.jpg" alt="The finished turret mounted on its motorized vehicle chassis"
+                class="w-full rounded-xl">
+            <p class="text-gray-400 text-sm font-light text-center mt-3">The finished turret-on-wheels prototype
+                (UiA Gruppe 4).</p>
+        </div>
+
+        <!-- How it works diagram -->
+        <div class="about-section rounded-2xl p-8 mb-8 fade-in">
+            <h2 class="text-2xl font-light text-white mb-4 text-center">How it works</h2>
+            <figure class="m-0">
+                <div class="overflow-x-auto">
+                    <svg viewBox="0 0 820 830" role="img"
+                        aria-label="Diagram of the drone protection system: a turret-mounted camera feeds video to Arduino #1, which relays it wirelessly to a nearby computer running a custom-trained YOLOv8 model. If no drone is detected, the turret sweeps an idle searching pattern and hands off to Arduino #2, which can drive the vehicle chassis to a new patrol position before the camera resumes scanning. If a drone is detected, the turret aims, tracks, and fires a NERF dart. An operator can remotely monitor the feed and manually override Arduino #2 to drive the vehicle."
+                        style="min-width:640px;width:100%;height:auto;display:block;margin:0 auto;font-family:inherit;">
+                        <defs>
+                            <marker id="iot-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7"
+                                markerHeight="7" orient="auto-start-reverse">
+                                <path d="M0,0 L10,5 L0,10 z" fill="#64748b" />
+                            </marker>
+                        </defs>
+
+                        <!-- connectors -->
+                        <g stroke="#64748b" stroke-width="1.5" fill="none">
+                            <line x1="410" y1="76" x2="410" y2="138" marker-end="url(#iot-arrow)" />
+                            <line x1="410" y1="196" x2="410" y2="258" marker-end="url(#iot-arrow)" />
+                            <line x1="410" y1="316" x2="410" y2="378" marker-end="url(#iot-arrow)" />
+                            <line x1="330" y1="436" x2="200" y2="498" marker-end="url(#iot-arrow)" />
+                            <line x1="490" y1="436" x2="620" y2="498" marker-end="url(#iot-arrow)" />
+                            <line x1="630" y1="556" x2="630" y2="618" marker-end="url(#iot-arrow)" />
+                            <line x1="190" y1="556" x2="190" y2="618" marker-end="url(#iot-arrow)" />
+                            <line x1="190" y1="740" x2="190" y2="678" marker-end="url(#iot-arrow)" />
+                            <path d="M60,648 L20,648 L20,48 L278,48" marker-end="url(#iot-arrow)" />
+                        </g>
+
+                        <!-- arrow labels -->
+                        <g fill="#94a3b8" font-size="12" text-anchor="middle">
+                            <text x="230" y="452">no drone</text>
+                            <text x="600" y="452">drone detected</text>
+                            <text x="700" y="590">fires dart</text>
+                            <text x="90" y="590">extends patrol</text>
+                            <text x="90" y="712">manual override</text>
+                            <text x="60" y="360" text-anchor="start">resumes scanning</text>
+                        </g>
+
+                        <!-- nodes -->
+                        <g font-family="inherit">
+                            <!-- A: camera -->
+                            <rect x="280" y="20" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                            <text x="410" y="53" text-anchor="middle" fill="#e2e8f0" font-size="14">Camera feed
+                                (turret-mounted)</text>
+
+                            <!-- B: arduino 1 -->
+                            <rect x="280" y="140" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                            <text x="410" y="164" text-anchor="middle" fill="#e2e8f0" font-size="13">Arduino #1 —
+                                turret &amp; camera</text>
+                            <text x="410" y="180" text-anchor="middle" fill="#94a3b8" font-size="11">streams video
+                                wirelessly</text>
+
+                            <!-- C: computer / YOLO -->
+                            <rect x="260" y="260" width="300" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                            <text x="410" y="293" text-anchor="middle" fill="#e2e8f0" font-size="14">Custom-trained
+                                YOLOv8 detects drones</text>
+
+                            <!-- D: decision -->
+                            <rect x="280" y="380" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#3b82f6" stroke-opacity="0.8" stroke-width="1.5" />
+                            <text x="410" y="413" text-anchor="middle" fill="#e2e8f0" font-size="14">Drone
+                                detected?</text>
+
+                            <!-- E1: idle searching -->
+                            <rect x="60" y="500" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                            <text x="190" y="533" text-anchor="middle" fill="#e2e8f0" font-size="13">Idle searching
+                                position</text>
+
+                            <!-- E2: aim and track -->
+                            <rect x="500" y="500" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#3b82f6" stroke-opacity="0.8" stroke-width="1.5" />
+                            <text x="630" y="533" text-anchor="middle" fill="#e2e8f0" font-size="13">Turret aims
+                                &amp; tracks target</text>
+
+                            <!-- F: fire -->
+                            <rect x="500" y="620" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                            <text x="630" y="653" text-anchor="middle" fill="#e2e8f0" font-size="13">Fires NERF dart
+                                (proof of concept)</text>
+
+                            <!-- G: arduino 2 -->
+                            <rect x="60" y="620" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                            <text x="190" y="644" text-anchor="middle" fill="#e2e8f0" font-size="13">Arduino #2 —
+                                vehicle controller</text>
+                            <text x="190" y="660" text-anchor="middle" fill="#94a3b8" font-size="11">drives the
+                                chassis</text>
+
+                            <!-- H: remote monitoring -->
+                            <rect x="60" y="740" width="260" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                            <text x="190" y="764" text-anchor="middle" fill="#e2e8f0" font-size="13">Remote
+                                monitoring</text>
+                            <text x="190" y="780" text-anchor="middle" fill="#94a3b8" font-size="11">operator can
+                                override &amp; drive</text>
+                        </g>
+                    </svg>
+                </div>
+                <figcaption class="text-gray-400 text-sm font-light text-center mt-4">
+                    Two Arduinos split the work: one drives the turret and camera, the other drives the vehicle it's
+                    mounted on, so the same detection loop keeps running while the rig repositions itself.
+                </figcaption>
+            </figure>
+        </div>
+
+        <!-- Feature cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🎯</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Real-time drone detection</h3>
+                <p class="text-gray-400 text-sm font-light">Computer vision runs continuously against the live
+                    camera feed to spot drones the moment they appear.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🤖</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Automated response</h3>
+                <p class="text-gray-400 text-sm font-light">Once a drone is detected, the turret aims and fires
+                    without an operator in the loop.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">📡</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Remote monitoring</h3>
+                <p class="text-gray-400 text-sm font-light">Operators can watch the camera feed and system status
+                    from a distance.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🔄</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Idle searching position</h3>
+                <p class="text-gray-400 text-sm font-light">With no drone in view, the turret sweeps a search
+                    pattern instead of sitting still.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🚙</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Remote controlled car</h3>
+                <p class="text-gray-400 text-sm font-light">The chassis can be manually driven to reposition the
+                    turret and extend patrol range.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🧠</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Custom-trained YOLOv8 model</h3>
+                <p class="text-gray-400 text-sm font-light">Trained specifically to recognize drones, rather than a
+                    generic object set.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🔌</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Dual-Arduino architecture</h3>
+                <p class="text-gray-400 text-sm font-light">One board drives the turret and camera, the other
+                    drives the vehicle it rides on.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🖨️</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">3D-printed hardware</h3>
+                <p class="text-gray-400 text-sm font-light">Turret mount and vehicle parts printed in-house for the
+                    prototype.</p>
+            </div>
         </div>
 
         <div id="footer-placeholder"></div>
@@ -38,4 +238,5 @@
 
     <script src="footerscript.js"></script>
 </body>
+
 </html>

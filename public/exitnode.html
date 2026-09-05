@@ -10,7 +10,7 @@
 </head>
 
 <body class="grid-background min-h-screen flex items-center justify-center p-4 md:p-8">
-    <div class="max-w-2xl w-full">
+    <div class="max-w-3xl w-full">
         <!-- Back Button -->
         <div class="mb-8 fade-in">
             <a href="index.html"
@@ -26,17 +26,133 @@
         </div>
 
         <!-- Header -->
-        <div class="text-center mb-16 fade-in">
+        <div class="text-center mb-12 fade-in">
             <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Evacuation system for
                 emergency services</h1>
-            <p id="desc" class="text-gray-400 text-lg font-light">Bachelor project in collaboration with CIEM for
-                evacuating people in a crisis</p>
-            <p id="features" class="text-gray-400 text-lg font-light">Features:</p>
-            <ul id="feature-list" class="list-disc list-inside text-gray-400 text-lg font-light">
-                <li>Biometric authentication</li>
-                <li>RFID badge scanning</li>
-                <li>Emergency reporting dashboard</li>
-            </ul>
+            <p id="desc" class="text-gray-400 text-lg font-light">Registers evacuees by RFID or biometrics and tracks
+                them across sites with custom Raspberry Pi IoT stations, giving responders a live view of who's
+                where.</p>
+        </div>
+
+        <!-- Tech stack -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8 fade-in">
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">Python</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">Flask</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">Tailwind CSS</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">Azure SQL</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">Azure Blob Storage</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">Raspberry Pi</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">3D-printed housing</span>
+        </div>
+
+        <!-- Blog-style intro -->
+        <div class="about-section rounded-2xl p-8 mb-8 fade-in">
+            <div class="flex items-center mb-4">
+                <span class="text-4xl mr-4">💡➡️📡</span>
+                <h2 class="text-2xl font-light text-white">From a brainstorm to a working IoT network</h2>
+            </div>
+            <p class="text-gray-400 text-lg font-light leading-relaxed">
+                The client was <span class="text-white">CIEM</span> (Center for Integrated Crisis Management), who
+                wanted new ideas for how IoT could support evacuation during a crisis. My group was chosen for the
+                project on the strength of our earlier work on the <a href="IoT.html" class="text-white underline decoration-transparent hover:decoration-white transition-all duration-300">anti-drone project</a>.
+                We landed on RFID and biometrics after brainstorming ways to register evacuees, letting people choose
+                a fingerprint or facial scan instead of carrying a physical card if they'd rather not.
+            </p>
+            <p class="text-gray-400 text-lg font-light leading-relaxed mt-4">
+                The point of issuing a card or scanning someone's biometrics is to log where evacuees are sent, much
+                like package tracking at the post office: it tells responders how many people are still on-site at
+                the evacuation point, how many have already moved on, and where those people currently are. A
+                person's location updates whenever they scan in at an IoT station placed at a key location, such as
+                a hospital or an emergency center set up somewhere like a hotel. The stations themselves are built
+                from bio-friendly 3D-printed plastic, with a screen for feedback, and run on a
+                <span class="text-white">Raspberry Pi</span>.
+            </p>
+        </div>
+
+        <!-- Demo video -->
+        <div class="about-section rounded-2xl p-8 mb-8 fade-in">
+            <h2 class="text-2xl font-light text-white mb-4 text-center">See it in action</h2>
+            <div class="relative w-full overflow-hidden rounded-lg" style="padding-top: 56.25%;">
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/oMGztSDNBLQ"
+                    title="ExitNode Demo" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Feature cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🪪</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">RFID badge scanning</h3>
+                <p class="text-gray-400 text-sm font-light">Evacuees register in seconds by scanning an RFID card at
+                    any IoT station.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🧬</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Biometric authentication</h3>
+                <p class="text-gray-400 text-sm font-light">Fingerprint or facial recognition as a card-free
+                    alternative for registering.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">📦</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Location tracking</h3>
+                <p class="text-gray-400 text-sm font-light">Package-tracking-style logging of where each evacuee has
+                    been sent.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🗺️</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Interactive map</h3>
+                <p class="text-gray-400 text-sm font-light">A live map of every registered site and how many evacuees
+                    are at each one.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🛡️</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Admin & user roles</h3>
+                <p class="text-gray-400 text-sm font-light">Role-based access separates responders from front-line
+                    scanning staff.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">📊</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Emergency reporting dashboard</h3>
+                <p class="text-gray-400 text-sm font-light">Live counts of who's still on-site, in transit, or at
+                    their destination.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🖨️</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">3D-printed IoT stations</h3>
+                <p class="text-gray-400 text-sm font-light">Custom scanning stations with a screen, built from
+                    bio-friendly 3D-printed plastic and powered by a Raspberry Pi.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🏥</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Multi-site deployment</h3>
+                <p class="text-gray-400 text-sm font-light">Works across hospitals, emergency centers, and improvised
+                    sites like hotels.</p>
+            </div>
+        </div>
+
+        <div class="text-center mb-16 fade-in">
+            <a href="https://github.com/NorwegianKiwi-glitch/Bachelor-Prosjekt" target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-300 group">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+                        0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755
+                        -1.09-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.833 2.807 1.304
+                        3.492.997.108-.775.42-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.93
+                        0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322
+                        3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.047.138 3.003.404
+                        2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176
+                        .77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.625-5.48 5.92
+                        .43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293
+                        0 .32.216.695.825.577C20.565 21.795 24 17.297 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span
+                    class="text-lg font-light border-b border-transparent group-hover:border-white transition-all duration-300">View
+                    on GitHub</span>
+            </a>
         </div>
 
         <div id="footer-placeholder"></div>
