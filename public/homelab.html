@@ -10,7 +10,7 @@
 </head>
 
 <body class="grid-background min-h-screen flex items-center justify-center p-4 md:p-8">
-    <div class="max-w-2xl w-full">
+    <div class="max-w-3xl w-full">
         <!-- Back Button -->
         <div class="mb-8 fade-in">
             <a href="index.html"
@@ -26,47 +26,115 @@
         </div>
 
         <!-- Header -->
-        <div class="text-center mb-16 fade-in">
-            <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Homelab</h1>
-            <p id="desc" class="text-gray-400 text-lg font-light">Current and future homelab setup and projects under work.</p>
-            <div class="mt-6 md:grid md:grid-cols-2 md:gap-6">
-                <!-- Hardware card -->
-                <section id="hardware" class="mb-6 md:mb-0 bg-gray-900/60 border border-gray-800 rounded-lg p-6">
-                    <h2 class="text-white text-2xl font-medium mb-2 flex items-center">
-                        <!-- simple device icon -->
-                        <svg class="w-6 h-6 mr-2 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                        </svg>
-                        Hardware (physical devices)
-                    </h2>
-                    <p class="text-gray-400 text-sm mb-3">Physical devices that host services or are part of the homelab.</p>
-                    <ul id="hardware_list" class="list-disc list-inside text-gray-200 text-lg font-light">
-                        <li>Raspberry Pi 4 8 GB RAM</li>
-                        <li>250GB SSD external</li>
-                    </ul>
-                </section>
+        <div class="text-center mb-12 fade-in">
+            <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Home lab</h1>
+            <p id="desc" class="text-gray-400 text-lg font-light">My self-hosted alternative to Big Tech's cloud —
+                run for privacy, cost, control, and the fun of building it myself.</p>
+        </div>
 
-                <!-- Services card -->
-                <section id="services" class="bg-gray-900/60 border border-gray-800 rounded-lg p-6">
-                    <h2 class="text-white text-2xl font-medium mb-2 flex items-center">
-                        <!-- simple server/app icon -->
-                        <svg class="w-6 h-6 mr-2 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                        </svg>
-                        Services (software & hosted apps)
-                    </h2>
-                    <p class="text-gray-400 text-sm mb-3">Applications and services running on the homelab hardware - what I'm hosting or experimenting with.</p>
-                    <ul id="services_list" class="list-disc list-inside text-gray-200 text-lg font-light">
-                        <li>Webserver (shelgen.no)</li>
-                        <li>Nextcloud</li>
-                        <li>Password manager</li>
-                        <li>Immich</li>
-                        <li>Jellyfin</li>
-                        <li>n8n</li>
-                        <li><s>Multi Factor Authentication</s></li>
-                    </ul>
-                </section>
+        <!-- Why & philosophy -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div class="about-section rounded-2xl p-8 fade-in">
+                <span class="text-3xl">💾</span>
+                <h2 class="text-xl font-light text-white mt-3 mb-2">Why I started</h2>
+                <p class="text-gray-400 text-base font-light leading-relaxed">
+                    I ran out of space on Google Drive for my photos, and didn't want to pay Google to store them,
+                    not when Google trains AI models on that data and sells it to advertisers. A homelab let me fix
+                    that while getting three things at once: privacy, lower cost, and full control over my own
+                    data, plus a standing excuse to keep learning.
+                </p>
             </div>
+            <div class="about-section rounded-2xl p-8 fade-in">
+                <span class="text-3xl">🔓</span>
+                <h2 class="text-xl font-light text-white mt-3 mb-2">My philosophy</h2>
+                <p class="text-gray-400 text-base font-light leading-relaxed">
+                    Stay as free from big tech companies as I reasonably can. I self-host whatever I can and feel
+                    comfortable running myself, email is one thing I'm leaving to the professionals, and I reach for
+                    open-source software whenever it's a real option.
+                </p>
+            </div>
+        </div>
+
+        <!-- Hardware -->
+        <div class="about-section rounded-2xl p-6 mb-8 fade-in">
+            <h2 class="text-xl font-light text-white mb-3 text-center">Hardware</h2>
+            <div class="flex flex-wrap justify-center gap-2">
+                <span
+                    class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">Raspberry
+                    Pi 4 — 8GB RAM</span>
+                <span
+                    class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">250GB
+                    external SSD</span>
+                <span
+                    class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-dashed border-gray-700 rounded-full">Planned:
+                    larger SSD</span>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="mb-8 fade-in">
+            <h2 class="text-2xl font-light text-white mb-4 text-center">Services</h2>
+            <div class="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
+                <div class="about-section rounded-xl p-6 flex-shrink-0 w-64 snap-start">
+                    <span class="text-3xl">🌐</span>
+                    <h3 class="text-white text-lg font-light mt-3 mb-1">Webserver</h3>
+                    <p class="text-gray-400 text-sm font-light">Hosts this very portfolio site, shelgen.no.</p>
+                </div>
+                <div class="about-section rounded-xl p-6 flex-shrink-0 w-64 snap-start">
+                    <span class="text-3xl">☁️</span>
+                    <h3 class="text-white text-lg font-light mt-3 mb-1">Nextcloud</h3>
+                    <p class="text-gray-400 text-sm font-light">File storage and sync across all my devices — my
+                        actual replacement for Google Drive.</p>
+                </div>
+                <div class="about-section rounded-xl p-6 flex-shrink-0 w-64 snap-start">
+                    <span class="text-3xl">🔑</span>
+                    <h3 class="text-white text-lg font-light mt-3 mb-1">Vaultwarden</h3>
+                    <p class="text-gray-400 text-sm font-light">Self-hosted password manager, compatible with the
+                        Bitwarden clients.</p>
+                </div>
+                <div class="about-section rounded-xl p-6 flex-shrink-0 w-64 snap-start">
+                    <span class="text-3xl">🖼️</span>
+                    <h3 class="text-white text-lg font-light mt-3 mb-1">Immich</h3>
+                    <p class="text-gray-400 text-sm font-light">Stores and organizes my private photos and
+                        videos.</p>
+                </div>
+                <div class="about-section rounded-xl p-6 flex-shrink-0 w-64 snap-start">
+                    <span class="text-3xl">🤖</span>
+                    <h3 class="text-white text-lg font-light mt-3 mb-1">n8n</h3>
+                    <p class="text-gray-400 text-sm font-light">Automates day-to-day tasks, from a daily news digest
+                        to a scheduled flirty good-morning message to my friends, just for fun.</p>
+                </div>
+                <div class="about-section rounded-xl p-6 flex-shrink-0 w-64 snap-start">
+                    <span class="text-3xl">🎵</span>
+                    <h3 class="text-white text-lg font-light mt-3 mb-1">Navidrome</h3>
+                    <p class="text-gray-400 text-sm font-light">Self-hosted music streaming for my own library.</p>
+                </div>
+            </div>
+            <p class="text-gray-500 text-sm font-light text-center mt-4">Also tried: Jellyfin (retired, the Pi 4
+                wasn't powerful enough) and MFA (paused after locking myself out once, too scared to try again just
+                yet).</p>
+        </div>
+
+        <div class="text-center mb-16 fade-in">
+            <a href="https://github.com/NorwegianKiwi-glitch/shelgen" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-300 group">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+                        0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755
+                        -1.09-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.833 2.807 1.304
+                        3.492.997.108-.775.42-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.93
+                        0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322
+                        3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.047.138 3.003.404
+                        2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176
+                        .77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.625-5.48 5.92
+                        .43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293
+                        0 .32.216.695.825.577C20.565 21.795 24 17.297 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span
+                    class="text-lg font-light border-b border-transparent group-hover:border-white transition-all duration-300">View
+                    on GitHub</span>
+            </a>
         </div>
 
         <div id="footer-placeholder"></div>

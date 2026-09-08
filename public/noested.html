@@ -10,31 +10,195 @@
 </head>
 
 <body class="grid-background min-h-screen flex items-center justify-center p-4 md:p-8">
-    <div class="max-w-2xl w-full">
+    <div class="max-w-3xl w-full">
         <!-- Back Button -->
         <div class="mb-8 fade-in">
-            <a href="index.html" class="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-300 group">
-                <svg class="w-5 h-5 mr-2 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <a href="index.html"
+                class="inline-flex items-center text-gray-400 hover:text-white transition-colors duration-300 group">
+                <svg class="w-5 h-5 mr-2 transition-transform duration-300 group-hover:-translate-x-1" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                 </svg>
-                <span class="text-lg font-light border-b border-transparent group-hover:border-white transition-all duration-300">Back to Portfolio</span>
+                <span
+                    class="text-lg font-light border-b border-transparent group-hover:border-white transition-all duration-300">Back
+                    to Portfolio</span>
             </a>
         </div>
 
-        <div class="text-center mb-16 fade-in">
-            <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Management repair system</h1>
-            <p id="desc" class="text-gray-400 text-lg font-light">
-                digital management system for reparing of winches for Nøsted& 
-            </br>
-                University capstone project in collaboration between UiA and Nøsted&
+        <!-- Header -->
+        <div class="text-center mb-12 fade-in">
+            <h1 id="title" class="text-5xl md:text-6xl font-light text-white mb-4 title-glow">Management repair
+                system</h1>
+            <p id="desc" class="text-gray-400 text-lg font-light">A digital repair-ticket system built for Nøsted's
+                winch repairs, replacing a pen-and-paper process with a tracked workflow from intake to
+                completion.</p>
+        </div>
+
+        <!-- Tech stack -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8 fade-in">
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">C#</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">.NET</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">ASP.NET MVC</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">Tailwind CSS</span>
+            <span class="px-3 py-1 text-sm text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">MariaDB</span>
+        </div>
+
+        <!-- Blog-style intro -->
+        <div class="about-section rounded-2xl p-8 mb-8 fade-in">
+            <div class="flex items-center mb-4">
+                <span class="text-4xl mr-4">📝➡️💻</span>
+                <h2 class="text-2xl font-light text-white">From pen and paper to a tracked digital workflow</h2>
+            </div>
+            <p class="text-gray-400 text-lg font-light leading-relaxed">
+                <a href="https://nosted.com/" target="_blank" rel="noopener noreferrer"
+                    class="text-white underline decoration-transparent hover:decoration-white transition-all duration-300">Nøsted</a>,
+                a local company, partnered with the University of Agder's bachelor program in IT and Information
+                Systems to digitize their existing pen-and-paper process for repairing winches. Built by a group of
+                bachelor students as a capstone project, the system gives Nøsted's staff a single web app, built
+                with <span class="text-white">C# and ASP.NET MVC</span> on a <span class="text-white">MariaDB</span>
+                backend, to log, assign, and track every repair job from intake to completion.
             </p>
-            <p id="features" class="text-gray-400 text-lg font-light">Features:</p>
-            <ul id="feature-list" class="list-disc list-inside text-gray-400 text-lg font-light">
-                <li>Login and auth</li>
-                <li>CRUD operations</li>
-                <li>Database integration</li>
-            </ul>
-            
+        </div>
+
+        <!-- How it works diagram -->
+        <div class="about-section rounded-2xl p-8 mb-8 fade-in">
+            <h2 class="text-2xl font-light text-white mb-4 text-center">How it works</h2>
+            <figure class="m-0">
+                <div class="overflow-x-auto">
+                    <svg viewBox="0 0 820 330" role="img"
+                        aria-label="Diagram of the repair ticket workflow: staff log in with role-based access and create a ticket, an admin who also manages technicians and user accounts assigns it to a technician, the technician updates its status as it moves through repair, and the ticket is marked closed, with the full record stored in MariaDB for reporting."
+                        style="min-width:640px;width:100%;height:auto;display:block;margin:0 auto;font-family:inherit;">
+                        <defs>
+                            <marker id="noested-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7"
+                                markerHeight="7" orient="auto-start-reverse">
+                                <path d="M0,0 L10,5 L0,10 z" fill="#64748b" />
+                            </marker>
+                        </defs>
+
+                        <!-- connectors -->
+                        <g stroke="#64748b" stroke-width="1.5" fill="none">
+                            <line x1="125" y1="76" x2="125" y2="148" marker-end="url(#noested-arrow)" />
+                            <line x1="315" y1="90" x2="315" y2="148" marker-end="url(#noested-arrow)" />
+                            <line x1="210" y1="185" x2="228" y2="185" marker-end="url(#noested-arrow)" />
+                            <line x1="400" y1="185" x2="418" y2="185" marker-end="url(#noested-arrow)" />
+                            <line x1="590" y1="185" x2="608" y2="185" marker-end="url(#noested-arrow)" />
+                            <line x1="695" y1="220" x2="695" y2="248" marker-end="url(#noested-arrow)" />
+                        </g>
+
+                        <!-- nodes -->
+                        <g font-family="inherit">
+                            <!-- login -->
+                            <rect x="40" y="20" width="170" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#3b82f6" stroke-opacity="0.8" stroke-width="1.5" />
+                            <text x="125" y="44" text-anchor="middle" fill="#e2e8f0" font-size="13">Staff log
+                                in</text>
+                            <text x="125" y="60" text-anchor="middle" fill="#94a3b8" font-size="11">role-based
+                                access</text>
+
+                            <!-- admin -->
+                            <rect x="230" y="20" width="170" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#3b82f6" stroke-opacity="0.8" stroke-width="1.5" />
+                            <text x="315" y="44" text-anchor="middle" fill="#e2e8f0" font-size="13">Admin</text>
+                            <text x="315" y="60" text-anchor="middle" fill="#94a3b8" font-size="11">assigns techs,
+                                manages accounts</text>
+
+                            <!-- ticket created -->
+                            <rect x="40" y="150" width="170" height="70" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                            <text x="125" y="180" text-anchor="middle" fill="#e2e8f0" font-size="13">Ticket
+                                created</text>
+                            <text x="125" y="197" text-anchor="middle" fill="#94a3b8" font-size="11">customer &amp;
+                                equipment</text>
+                            <text x="125" y="211" text-anchor="middle" fill="#94a3b8" font-size="11">logged</text>
+
+                            <!-- assigned -->
+                            <rect x="230" y="150" width="170" height="70" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                            <text x="315" y="180" text-anchor="middle" fill="#e2e8f0" font-size="13">Assigned</text>
+                            <text x="315" y="197" text-anchor="middle" fill="#94a3b8" font-size="11">technician takes
+                                over</text>
+
+                            <!-- repaired -->
+                            <rect x="420" y="150" width="170" height="70" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                            <text x="505" y="180" text-anchor="middle" fill="#e2e8f0" font-size="13">Repaired</text>
+                            <text x="505" y="197" text-anchor="middle" fill="#94a3b8" font-size="11">status &amp;
+                                progress</text>
+                            <text x="505" y="211" text-anchor="middle" fill="#94a3b8" font-size="11">tracked</text>
+
+                            <!-- closed -->
+                            <rect x="610" y="150" width="170" height="70" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                            <text x="695" y="180" text-anchor="middle" fill="#e2e8f0" font-size="13">Closed</text>
+                            <text x="695" y="197" text-anchor="middle" fill="#94a3b8" font-size="11">marked
+                                complete</text>
+
+                            <!-- reports -->
+                            <rect x="610" y="250" width="170" height="56" rx="10" fill="#0f172a" fill-opacity="0.5"
+                                stroke="#94a3b8" stroke-opacity="0.5" stroke-width="1.5" />
+                            <text x="695" y="274" text-anchor="middle" fill="#e2e8f0" font-size="13">Reports</text>
+                            <text x="695" y="290" text-anchor="middle" fill="#94a3b8" font-size="11">stored in
+                                MariaDB</text>
+                        </g>
+                    </svg>
+                </div>
+                <figcaption class="text-gray-400 text-sm font-light text-center mt-4">
+                    Every ticket moves through the same four stages, and lands in MariaDB either way, so nothing gets
+                    lost the way it could on paper.
+                </figcaption>
+            </figure>
+        </div>
+
+        <!-- Feature cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🔐</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Login, roles &amp; accounts</h3>
+                <p class="text-gray-400 text-sm font-light">Staff sign in with role-based access; admins can create
+                    and delete user accounts as roles change.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🎫</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Repair ticket logging</h3>
+                <p class="text-gray-400 text-sm font-light">Log a new repair ticket in a couple of clicks instead of
+                    a paper form.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">📶</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Status tracking</h3>
+                <p class="text-gray-400 text-sm font-light">Follow a ticket through every stage: assigned, repaired,
+                    closed.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🧾</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Customer &amp; equipment records</h3>
+                <p class="text-gray-400 text-sm font-light">Every ticket links back to a customer and the specific
+                    winch being serviced.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🧑‍🔧</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Technician assignment</h3>
+                <p class="text-gray-400 text-sm font-light">Admins assign tickets to the technician who'll handle the
+                    repair.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">📊</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Reporting</h3>
+                <p class="text-gray-400 text-sm font-light">Generate reports across tickets, technicians, and
+                    turnaround time.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🛠️</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">Full CRUD operations</h3>
+                <p class="text-gray-400 text-sm font-light">Create, read, update, and delete tickets, customers, and
+                    equipment records.</p>
+            </div>
+            <div class="about-section rounded-xl p-6 fade-in">
+                <span class="text-3xl">🗄️</span>
+                <h3 class="text-white text-lg font-light mt-3 mb-1">MariaDB-backed storage</h3>
+                <p class="text-gray-400 text-sm font-light">All records persisted in MariaDB for a reliable audit
+                    trail.</p>
+            </div>
         </div>
 
         <div id="footer-placeholder"></div>
